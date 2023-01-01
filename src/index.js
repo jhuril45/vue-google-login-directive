@@ -1,7 +1,12 @@
 import directive from "./directive";
-import googleApi from "./googleApi.js";
+const api_script = 'https://apis.google.com/js/api:client.js'
 
-eval(googleApi)
+let googleSignInAPI = document.createElement("script");
+googleSignInAPI.setAttribute(
+  "src",
+  api_script
+);
+document.head.appendChild(googleSignInAPI);
 
 const plugin = {
   install(Vue) {
