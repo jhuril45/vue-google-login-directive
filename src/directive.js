@@ -34,8 +34,8 @@ function initLogin(el, value) {
   window.gapi.load("auth2", () => {
     auth2 = window.gapi.auth2.init({
       client_id: value.client_id,
-      cookiepolicy: "single_host_origin",
-      plugin_name: "well_scape",
+      cookiepolicy: value.cookiepolicy || "single_host_origin",
+      plugin_name: value.plugin_name,
     });
     
     el.removeEventListener("click", () => login(value));

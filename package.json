@@ -23,5 +23,8 @@
     "url": "git+https://github.com/jhuril45/vue-google-login-directive.git"
   },
   "author": "Jhuril Bandola",
+  "bugs": {
+    "url": "https://github.com/jhuril45/vue-google-login-directive/issues"
+  },
   "license": "MIT"
 }
