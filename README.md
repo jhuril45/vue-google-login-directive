@@ -47,3 +47,10 @@ import { ref } from "vue";
   <div v-google-login="googleSettings"></div>
 </template>
 ```
+
+
+> Looking for the [Apple counterpart](https://github.com/jhuril45/vue-apple-login-directive)?
+
+## License
+
+MIT © [Jhuril Bandola](https://github.com/jhuril45)
