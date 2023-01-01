@@ -2,16 +2,16 @@ import { directiveHooks } from "./utils";
 
 let auth2 = null;
 
-function signInGoogle(value) {
+function login(value) {
   auth2
-    .signIn()
-    .then(function (googleUser) {
-      value.OnSuccess(googleUser.getAuthResponse().id_token);
-      googleUser.disconnect();
-    })
-    .catch(function (error) {
-      value.Onfail(error);
-    });
+  .signIn()
+  .then(function (googleUser) {
+    value.OnSuccess(googleUser.getAuthResponse().id_token);
+    googleUser.disconnect();
+  })
+  .catch(function (error) {
+    value.Onfail(error);
+  });
 }
 
 function CheckComponentMethods(value) {
@@ -28,7 +28,7 @@ function CheckComponentMethods(value) {
   }
 }
 
-function initSignInGoogle(el, value) {
+function initLogin(el, value) {
   CheckComponentMethods(value);
 
   window.gapi.load("auth2", () => {
@@ -38,21 +38,21 @@ function initSignInGoogle(el, value) {
       plugin_name: "well_scape",
     });
     
-    el.removeEventListener("click", () => signInGoogle(value));
-    el.addEventListener("click", () => signInGoogle(value));
+    el.removeEventListener("click", () => login(value));
+    el.addEventListener("click", () => login(value));
   });
 }
 
 function bind(el, { value }) {
-  initSignInGoogle(el, value);
+  initLogin(el, value);
 }
 
 function unbind(el, { value }) {
-  el.removeEventListener("click", () => signInGoogle(value));
+  el.removeEventListener("click", () => login(value));
 }
 
 function update(el, { value, oldValue }) {
-  initSignInGoogle(el, value);
+  initLogin(el, value);
 }
 
 const directive = {

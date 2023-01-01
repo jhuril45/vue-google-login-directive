@@ -1,5 +1,5 @@
 # v-google-login
-A simple Vue directive to include Google Sign-In Button behavior in any component.
+A simple Vue directive to include Google Login Button behavior in any component.
 
 ## Install
 
