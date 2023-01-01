@@ -1,6 +1,6 @@
 {
   "name": "vue-google-login-directive",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple log in with google directive for vue",
   "main": "src/index.js",
   "scripts": {
