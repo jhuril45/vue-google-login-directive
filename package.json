@@ -1,6 +1,6 @@
 {
   "name": "vue-google-login-directive",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A simple log in with Google directive for vue",
   "main": "src/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "vue3": "npm:vue@^3.2.37"
   },
   "peerDependencies": {
-    "vue": "^2.6.0 || >=3.2.0"
+    "vue": "^2.6.0 || >=3.0.0"
   },
   "keywords": [
     "github",
